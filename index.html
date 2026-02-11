@@ -1,0 +1,52 @@
+以下は、HTML・CSS・JavaScriptを使ったシンプルなインタラクティブWebページの例です。ボタンを押すと背景色が変わります。
+
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            transition: background-color 0.5s ease;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>インタラクティブWebページ</h1>
+    <p>ボタンを押すと背景色が変わります。</p>
+    <button onclick="changeColor()">色を変更</button>
+
+    <script>
+        function changeColor() {
+            const colors = ["#f8b195", "#f67280", "#c06c84", "#6c5b7b", "#355c7d"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+
+</body>
+</html>
+```
